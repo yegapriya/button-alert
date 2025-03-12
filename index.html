@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color changing buttons with alerts</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color changing buttons with alerts</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
   <div class="body">
-  
-    <div >
+
+    <div>
       <h2>WELCOME</h2>
-    <p>Adding Two Numbers</p>
-    <input type="number" placeholder="Enter First Number" id="num1">
-    <input type="number" placeholder="Enter second Number" id="num2">
-    <button onclick="addNumbers()">ADD</button>
-    <p>Result: <span id ="result"></span></p>
+      <p>Adding Two Numbers</p>
+      <input type="number" placeholder="Enter First Number" id="num1">
+      <input type="number" placeholder="Enter second Number" id="num2">
+      <button onclick="addNumbers()" class="add">ADD</button>
+      <p>Result: <span id="result"></span></p>
     </div>
     <div>
-    <Button class="but" id="button" onclick="changeColor()" type="submit">Sumbit</Button>
+      <Button class="but" id="button" onclick="changeColor()" type="submit">SUBMIT</Button>
     </div>
-    </div>
-    <script>
-      function addNumbers(){
-        let num1 =parseFloat(document.getElementById("num1").value);
-        let num2 =parseFloat(document.getElementById("num2").value);
-        let Sum = num1 +num2;
-         document.getElementById("result").innerText=Sum;
+  </div>
+  <script>
+    function addNumbers() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let Sum = num1 + num2;
+      document.getElementById("result").innerText = Sum;
 
+    }
+    function changeColor() {
+      let body = document.querySelector("body");
+      let button = document.getElementById("button");
+      let colors = ["lawngreen", "purple", "blue", " #0a9ae3", "grey"];
+      let randomcolor = colors[Math.floor(Math.random() * colors.length)];
+      body.style.backgroundColor = randomcolor;
+    }
+    function showGreetings() {
+      let currentHours = new Date().getHours();
+      let greetings;
+      if (greetings < 12) {
+        greetings = "Good Morning 🌅🌟 "
       }
-      function changeColor(){
-        let body = document.querySelector("body");
-        let button = document.getElementById("button");
-        let colors=["lawngreen","purple","blue"," #0a9ae3","grey"];
-        let randomcolor = colors[Math.floor(Math.random()*colors.length)];
-        body.style.backgroundColor = randomcolor; 
+      else if (greetings > 18) {
+        greetings = "Good Afternoon 🌄🌕"
       }
-      function showGreetings(){
-        let currentHours = new Date().getHours();
-        let greetings;
-        if (greetings<12)
-      {
-        greetings ="Good Morning 🌅🌟 "
+      else {
+        greetings = "Good Evening🌆🌙🕯️ "
       }
-      else if (greetings > 18)
-      {
-        greetings ="Good Afternoon 🌄🌕"
-      }
-      else 
-      {
-        greetings="Good Evening🌆🌙🕯️ "
-      }
-      alert (greetings);
-     
-     
-      }
-      showGreetings();
-    </script>
+      alert(greetings);
+
+
+    }
+    showGreetings();
+  </script>
 </body>
+
 </html>
