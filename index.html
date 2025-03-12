@@ -8,11 +8,28 @@
 </head>
 <body>
 
-  <div>
-    <h2>WELCOME</h2>
-    <Button class="but" id="button" onclick="changeColor()">Hello</Button>
+  <div class="body">
+  
+    <div >
+      <h2>WELCOME</h2>
+    <p>Adding Two Numbers</p>
+    <input type="number" placeholder="Enter First Number" id="num1">
+    <input type="number" placeholder="Enter second Number" id="num2">
+    <button onclick="addNumbers()">ADD</button>
+    <p>Result: <span id ="result"></span></p>
+    </div>
+    <div>
+    <Button class="but" id="button" onclick="changeColor()" type="submit">Sumbit</Button>
+    </div>
     </div>
     <script>
+      function addNumbers(){
+        let num1 =parseFloat(document.getElementById("num1").value);
+        let num2 =parseFloat(document.getElementById("num2").value);
+        let Sum = num1 +num2;
+         document.getElementById("result").innerText=Sum;
+
+      }
       function changeColor(){
         let body = document.querySelector("body");
         let button = document.getElementById("button");
