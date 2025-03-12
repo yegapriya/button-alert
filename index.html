@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changing buttons with alerts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div>
+    <h2>WELCOME</h2>
+    <Button class="but" id="button" onclick="changeColor()">Hello</Button>
+    </div>
+    <script>
+      function changeColor(){
+        let body = document.querySelector("body");
+        let button = document.getElementById("button");
+        let colors=["lawngreen","purple","blue"," #0a9ae3","grey"];
+        let randomcolor = colors[Math.floor(Math.random()*colors.length)];
+        body.style.backgroundColor = randomcolor; 
+      }
+      function showGreetings(){
+        let currentHours = new Date().getHours();
+        let greetings;
+        if (greetings<12)
+      {
+        greetings ="Good Morning 🌅🌟 "
+      }
+      else if (greetings > 18)
+      {
+        greetings ="Good Afternoon 🌄🌕"
+      }
+      else 
+      {
+        greetings="Good Evening🌆🌙🕯️ "
+      }
+      alert (greetings);
+     
+     
+      }
+      showGreetings();
+    </script>
+</body>
+</html>

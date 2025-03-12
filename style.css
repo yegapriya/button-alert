@@ -1,0 +1,24 @@
+body{
+    margin: 0%;
+    background:black;
+    color: aliceblue;
+    
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   height: 100vh;
+    
+}
+
+.but{
+    padding: 20px 50px;
+    border: none;
+    border-radius: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    
+}
